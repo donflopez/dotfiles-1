@@ -1,6 +1,9 @@
 [commit]
 	template = ~/.gitmessage
 	gpgsign = true
+[user]
+	name = Matan Kushner
+	email = hello@matchai.dev
 [alias]
 	l = log --pretty=oneline -n 50 --graph --abbrev-commit
 	save = !git add -A && git commit -v -m 'SAVEPOINT'
@@ -11,8 +14,6 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
-[credential]
-	helper = osxkeychain
 [push]
 	default = current
 [branch]
@@ -35,7 +36,5 @@
 	prune = true
 [include]
 	path = .gitconfig.local
-[gpg]
-	program = /usr/local/MacGPG2/bin/gpg
 [init]
 	defaultBranch = main
