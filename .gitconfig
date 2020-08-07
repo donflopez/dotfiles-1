@@ -1,6 +1,5 @@
 [commit]
 	template = ~/.gitmessage
-	gpgsign = true
 [user]
 	name = Matan Kushner
 	email = hello@matchai.dev

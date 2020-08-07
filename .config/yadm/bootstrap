@@ -1,0 +1,14 @@
+#!/bin/sh
+
+command_exists () {
+    type "$1" &> /dev/null ;
+}
+
+if ! command_exists brew ; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+fi
+
+# Ignore failure caused by Darwin-only dependencies
+brew bundle --file=~/.Brewfile || true
+
